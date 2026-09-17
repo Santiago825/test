@@ -1,11 +1,18 @@
-// Generador manual nativo (Cero dependencias, compatible con Node y Jest por defecto)
+// Generador manual nativo (Cero dependencias)
 
 const generateOneBook = () => {
   // Simula un ID único (UUID alternativo)
-  const randomId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  const randomId = Math.random().toString(36).substring(2, 15)
+    + Math.random().toString(36).substring(2, 15);
 
-  // Lista de nombres ficticios para tus libros de prueba
-  const titles = ['Harry Potter and the Code', 'Node.js Chronicles', 'The Clean Coder Guide', 'Mastering Jest', 'Express in Action'];
+  // Lista de nombres ficticios (Separados en varias líneas para no romper max-len)
+  const titles = [
+    'Harry Potter and the Code',
+    'Node.js Chronicles',
+    'The Clean Coder Guide',
+    'Mastering Jest',
+    'Express in Action',
+  ];
   const randomTitle = `${titles[Math.floor(Math.random() * titles.length)]} ${Math.floor(Math.random() * 100)}`;
 
   // Simula un precio aleatorio entre 10 y 100
