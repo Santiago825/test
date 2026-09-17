@@ -14,7 +14,7 @@ describe('Test for hello endpoint', () => {
 
   beforeAll(async() => {
     app = createApp();
-    server = app.listen(3001);
+    server = app.listen(0);
     const client = new MongoClient(MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
